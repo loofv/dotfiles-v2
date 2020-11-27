@@ -1,6 +1,6 @@
 # dotfiles-v2
 Configuration files, aliases and scripts
-########################################
+
 Get the config up and running:
 
 Install nvim from terminal. 
