@@ -1,0 +1,10 @@
+# !bin/sh
+
+cp ~/.oh-my-zsh/custom/themes/loveh-theme.zsh-theme ~/git/dotfiles-v2/loveh-theme.zsh-theme
+cp ~/.config/nvim/init.vim  ~/git/dotfiles-v2/init.vim
+cp ~/.aliases ~/git/dotfiles-v2/.aliases
+cp ~/.zshrc ~/git/dotfiles-v2/.zshrc
+cp ~/.custom_scripts/startup ~/git/dotfiles-v2/startup
+cp ~/.custom_scripts/copyconfig ~/git/dotfiles-v2/copyconfig
+
+
