@@ -63,7 +63,10 @@ highlight SignColumn ctermbg=NONE guibg=NONE
 " ------------------------------------------------
 let mapleader = " "
 let g:mapleader = " "
+" Search files in all subdirectories with FZF
 nnoremap <leader>ff :FZF<CR>
+" View current buffers
+nnoremap <leader>bb :Buffers<CR>
 " ------------------------------------------------
 " Misc
 " ------------------------------------------------
