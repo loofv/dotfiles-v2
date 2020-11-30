@@ -36,6 +36,12 @@ source $ZSH/oh-my-zsh.sh
 # Run my login scripts
 . ~/.custom_scripts/startup
 
+# Command history
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+bindkey '^R' history-incremental-search-backward
+
 # Vim mode
 bindkey -v
 export KEYTIMEOUT=1
@@ -67,5 +73,7 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
+# Sourcing
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 source /home/loveh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
