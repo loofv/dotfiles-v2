@@ -1,4 +1,4 @@
 # !bin/sh
 
 setxkbmap -option caps:escape
-xset r rate 220 40
+xset r rate 190 30

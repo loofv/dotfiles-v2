@@ -27,7 +27,7 @@ set lazyredraw
 set magic
 set showmatch
 " Makes search-and-replace show what is being replaced
-set inccommand=nosplit 
+set inccommand=nosplit
 if executable('rg')
   set grepprg=rg\ --vimgrep
 endif
@@ -37,13 +37,17 @@ endif
 set mouse=a
 " Use ctrl y to copy to system clipboard
 nnoremap Y "+y
+" Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
+set splitbelow splitright
 " ------------------------------------------------
-" Formatting 
+" Formatting
 " ------------------------------------------------
 syntax on
 " Enable autocompletion
-" set wildmode=longest,list,full
 set wildmenu
+set wildmode=longest,list,full
+" Automatically deletes all trailing whitespace when saving.
+autocmd BufWritePre * %s/\s\+$//e
 " ------------------------------------------------
 " Appearance
 " ------------------------------------------------
@@ -55,13 +59,17 @@ set signcolumn=yes
 " Hide ugly grey bar to the left
 highlight SignColumn ctermbg=NONE guibg=NONE
 " ------------------------------------------------
+" Key bindings
+" ------------------------------------------------
+let mapleader = " "
+let g:mapleader = " "
+nnoremap <leader>ff :FZF<CR>
+" ------------------------------------------------
 " Misc
 " ------------------------------------------------
 " Automatically run source on this file after it has been edited to load changes
 autocmd! bufwritepost .vimrc source %
 set noswapfile
-let mapleader = " "
-let g:mapleader = " "
 " ------------------------------------------------
 " Plugin related settings
 " ------------------------------------------------
