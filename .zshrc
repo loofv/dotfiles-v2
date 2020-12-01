@@ -2,8 +2,8 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.custom_scripts:$PATH"
 export ZSH="/home/loveh/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 ZSH_THEME="loveh-theme"
+source $ZSH/oh-my-zsh.sh
 
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"

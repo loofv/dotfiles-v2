@@ -15,8 +15,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'srcery-colors/srcery-vim'
-Plug  'altercation/vim-colors-solarized'
+Plug 'preservim/nerdtree'
+" Plug 'srcery-colors/srcery-vim'
+" Plug  'altercation/vim-colors-solarized'
 call plug#end()
 " ------------------------------------------------
 " Search (SK stuff)
@@ -65,6 +66,7 @@ let mapleader = " "
 let g:mapleader = " "
 " Search files in all subdirectories with FZF
 nnoremap <leader>ff :FZF<CR>
+nnoremap <leader>nt :NERDTree<CR>
 " View current buffers
 nnoremap <leader>bb :Buffers<CR>
 " ------------------------------------------------
@@ -76,6 +78,8 @@ set noswapfile
 " ------------------------------------------------
 " Plugin related settings
 " ------------------------------------------------
+"  Let nerdtree see hidden files, dotfiles etc.
+let NERDTreeShowHidden=1
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
