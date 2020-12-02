@@ -1,0 +1,2 @@
+# !bin/sh
+ln -s -f ~/git/dotfiles-v2/compton.conf ~/.config/compton/compton.conf
