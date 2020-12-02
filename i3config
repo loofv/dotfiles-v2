@@ -191,6 +191,8 @@ exec_always --bg-scale ~/Pictures/Wallpapers/Christmas.jpg
 exec teams
 exec google-chrome
 exec --no-startup-id compton
+exec feh --bg-scale Pictures/Wallpapers/Christmas.jpg
+
 # Start certain programs in certain workspaces on startup
 assign [class="Microsoft Teams - Preview"] $ws1
 assign [class="Google-chrome"] $ws2
