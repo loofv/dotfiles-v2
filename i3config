@@ -190,7 +190,7 @@ exec_always --bg-scale ~/Pictures/Wallpapers/Christmas.jpg
 # exec_always ~/.custom_scripts/start-eclipse
 exec teams
 exec google-chrome
-
+exec --no-startup-id compton
 # Start certain programs in certain workspaces on startup
 assign [class="Microsoft Teams - Preview"] $ws1
 assign [class="Google-chrome"] $ws2
