@@ -16,3 +16,12 @@ Git settings:
 git config --global core.editor "vim"
 git config --global core.pager cat
 
+
+== Installs ==
+sudo apt-get install neovim
+sudo apt-get install zsh
+sudo apt-get install i3
+sudo apt-get install compton
+sudo apt-get install feh
+sudo apt-get install fzf # I think
+
