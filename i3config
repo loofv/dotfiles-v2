@@ -36,7 +36,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -91,9 +92,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Teams"
-set $ws2 "2: Browser"
-set $ws3 "3: Eclipse"
+set $ws1 "1: Teams/browser"
+set $ws2 "2: Eclipse"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -104,7 +105,7 @@ set $ws9 "9"
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
+bindsym $mod+3 workspace number $ws3
 bindsym $mod+4 workspace number $ws4
 bindsym $mod+5 workspace number $ws5
 bindsym $mod+6 workspace number $ws6
@@ -193,5 +194,5 @@ exec --no-startup-id compton
 
 # Start certain programs in certain workspaces on startup
 assign [class="Microsoft Teams - Preview"] $ws1
-assign [class="Google-chrome"] $ws2
-assign [class="Eclipse"] $ws3
+assign [class="Google-chrome"] $ws1
+assign [class="Eclipse"] $ws2
