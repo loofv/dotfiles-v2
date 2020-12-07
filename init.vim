@@ -1,5 +1,5 @@
 " ------------------------------------------------
-" Loveh Nvim config. Changing here to test symlinks.
+" Loveh Nvim config
 " ------------------------------------------------
 
 " ------------------------------------------------
@@ -30,30 +30,27 @@ set showmatch
 " Makes search-and-replace show what is being replaced
 set inccommand=nosplit
 if executable('rg')
-  set grepprg=rg\ --vimgrep
+	set grepprg=rg\ --vimgrep
 endif
 " ------------------------------------------------
 " Movement
 " ------------------------------------------------
 set mouse=a
-" Use ctrl y to copy to system clipboard
+" Use shift y to copy to system clipboard
 nnoremap Y "+y
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 set splitbelow splitright
+nnoremap <leader><Tab> :b#<CR>
 " ------------------------------------------------
-" Formatting
+" Formatting and appearance
 " ------------------------------------------------
 syntax on
 " Enable autocompletion
 set wildmenu
 set wildmode=longest,list,full
-" Automatically deletes all trailing whitespace when saving.
-autocmd BufWritePre * %s/\s\+$//e
-" ------------------------------------------------
-" Appearance
-" ------------------------------------------------
 set number
 set relativenumber
+set ignorecase
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
@@ -72,8 +69,6 @@ nnoremap <leader>bb :Buffers<CR>
 " ------------------------------------------------
 " Misc
 " ------------------------------------------------
-" Automatically run source on this file after it has been edited to load changes
-autocmd! bufwritepost .vimrc source %
 set noswapfile
 " ------------------------------------------------
 " Plugin related settings
@@ -88,3 +83,22 @@ set nocompatible
 filetype plugin on
 " TextEdit might fail if hidden is not set.
 set hidden
+" Coc
+hi CocUnderline cterm=underline gui=underline
+let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css' ]
+" ------------------------------------------------
+" Auto commands
+" ------------------------------------------------
+augroup autocommands
+	autocmd!
+	" Restore last cursor position and marks on open
+	au BufReadPost *
+				\ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+				\ |   exe "normal! g`\""
+				\ | endif
+	" Automatically deletes all trailing whitespace when saving.
+	autocmd BufWritePre * %s/\s\+$//e
+	" Automatically run source on this file after it has been edited to load changes
+	autocmd! bufwritepost .config/nvim/init.vim source %
+augroup END
+
