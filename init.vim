@@ -66,6 +66,8 @@ nnoremap <leader>ff :FZF<CR>
 nnoremap <leader>nt :NERDTree<CR>
 " View current buffers
 nnoremap <leader>bb :Buffers<CR>
+inoremap <expr><Tab> pumvisible() ? "\<C-n>" : coc#refresh()
+inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : coc#refresh()
 " ------------------------------------------------
 " Misc
 " ------------------------------------------------

@@ -12,7 +12,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Ubuntu Mono
+font pango:Ubuntu Medium
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -92,8 +92,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Teams/browser"
-set $ws2 "2: Eclipse"
+set $ws1 "1"
+set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -167,7 +167,8 @@ bindsym $mod+minus scratchpad show
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
-set $mode_system System (l) lock, (e) logout, (r) reboot, (Shift+s) shutdown
+set $Locker i3lock && sleep 1
+set $mode_system System (l) lock & suspend, (e) log out of window manager, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     # SK bindings, requires $Locker to be set.
     # bindsym l exec --no-startup-id $Locker, mode "default"
@@ -176,8 +177,8 @@ mode "$mode_system" {
     # bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     # bindsym r exec --no-startup-id systemctl reboot, mode "default"
     # bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+    bindsym l exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym l exec --no-startup-id i3lock lock, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
 
@@ -200,6 +201,6 @@ exec google-chrome
 exec --no-startup-id compton
 
 # Start certain programs in certain workspaces on startup
-assign [class="Microsoft Teams - Preview"] $ws1
-assign [class="Google-chrome"] $ws1
-assign [class="Eclipse"] $ws2
+# assign [class="Microsoft Teams - Preview"] $ws1
+# assign [class="Google-chrome"] $ws1
+# assign [class="Eclipse"] $ws2
