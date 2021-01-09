@@ -8,6 +8,7 @@ sudo apt-get install compton
 sudo apt-get install feh
 sudo apt-get install fzf
 sudo apt-get install git
+sudo apt-get install arandr
 
 Install oh-my-zsh according to github instructions.
 Install zsh-syntax-highlighting according to github instructions.
