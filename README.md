@@ -13,9 +13,7 @@ Get the config up and running:
 8. do :PlugInstall in Vim to install plugins.
 9. Install yarn according to website instructions (required for coc.nvim).
 10. Install Alacritty according to github instructions. May need to run cargo command like this: ~/.cargo/bin/cargo install alacritty
-
-run symlinks script.
-
-11. Git settings:
+11. run symlinks script.
+12. Git settings:
 git config --global core.editor "vim"
 git config --global core.pager cat
