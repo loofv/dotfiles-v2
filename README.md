@@ -3,14 +3,19 @@ Configuration files, aliases and scripts
 
 Get the config up and running:
 
-Install nvim from terminal. 
-Follow instructions in nvim on how to initialize, so you get your init.vim file.
+1. clone this repo.
+2. run installs script.
+3. run mkdirs script.
+4. Install oh-my-zsh according to github instructions.
+5. Install zsh-syntax-highlighting according to github instructions.
+6. Do setup of nvim and i3.
+7. Install vim-plug WITHOUT the automatic install in config, do it from command line.
+8. do :PlugInstall in Vim to install plugins.
+9. Install yarn according to website instructions (required for coc.nvim).
+10. Install Alacritty according to github instructions. May need to run cargo command like this: ~/.cargo/bin/cargo install alacritty
 
-Install zsh from terminal. Hit (2) on first run so you get configs.
-Install oh-my-zsh according to github instructions.
+run symlinks script.
 
-Install vim-plug WITHOUT the automatic install in config, do it from command line.
-do :PlugInstall in Vim to install plugins.
-
-Now vim with plugins should work, as well as zsh, colors and the theme. 
-Still need to figure out where to place startup scripts to get them to work.
+11. Git settings:
+git config --global core.editor "vim"
+git config --global core.pager cat
