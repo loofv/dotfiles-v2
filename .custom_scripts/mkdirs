@@ -1,0 +1,7 @@
+mkdir ~/.config/compton
+mkdir ~/.config/alacritty
+mkdir ~/.custom_scripts
+mkdir ~/programs
+mkdir ~/pictures
+mkdir ~/pictures/wallpapers
+
