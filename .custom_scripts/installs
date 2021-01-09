@@ -1,0 +1,10 @@
+sudo apt-get update
+sudo apt-get install neovim
+sudo apt-get install zsh
+sudo apt-get install i3
+sudo apt-get install compton
+sudo apt-get install feh
+sudo apt-get install fzf
+sudo apt-get install git
+sudo apt-get install arandr
+sudo apt install default-jre
