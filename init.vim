@@ -16,6 +16,7 @@ Plug 'ianks/vim-tsx'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
+Plug 'ayu-theme/ayu-vim'
 " Plug 'srcery-colors/srcery-vim'
 " Plug  'altercation/vim-colors-solarized'
 call plug#end()
@@ -54,8 +55,15 @@ set ignorecase
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
+set termguicolors     " enable true colors support
+" Theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 " Hide ugly grey bar to the left
 highlight SignColumn ctermbg=NONE guibg=NONE
+" Enable transparent background in vim even when using themes
+hi Normal guibg=NONE ctermbg=NONE
 " ------------------------------------------------
 " Key bindings
 " ------------------------------------------------

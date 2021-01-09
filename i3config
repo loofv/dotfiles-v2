@@ -52,6 +52,10 @@ bindsym $mod+d exec dmenu_run
 # Start Gnome control center, where you can work with networks, VPN, bluetooth etc
 bindsym $mod+g exec gnome-control-center
 
+#crop-area screenshot by pressing Mod + printscreen
+bindsym --release $mod+p exec gnome-screenshot -i
+# prova att pipea till xclip? gjorde ingen skillnad :(
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
