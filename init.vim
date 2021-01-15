@@ -64,6 +64,13 @@ colorscheme ayu
 highlight SignColumn ctermbg=NONE guibg=NONE
 " Enable transparent background in vim even when using themes
 hi Normal guibg=NONE ctermbg=NONE
+" Tabs
+set expandtab
+set shiftwidth=4
+set tabstop=4
+" Make tabs visible
+set list
+set listchars=tab:>-
 " ------------------------------------------------
 " Key bindings
 " ------------------------------------------------
@@ -74,12 +81,14 @@ nnoremap <leader>ff :FZF<CR>
 nnoremap <leader>nt :NERDTree<CR>
 " View current buffers
 nnoremap <leader>bb :Buffers<CR>
-inoremap <expr><Tab> pumvisible() ? "\<C-n>" : coc#refresh()
-inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : coc#refresh()
+inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 " ------------------------------------------------
 " Misc
 " ------------------------------------------------
 set noswapfile
+" Be able to yank to regular clipboard
+set clipboard=unnamedplus
 " ------------------------------------------------
 " Plugin related settings
 " ------------------------------------------------
