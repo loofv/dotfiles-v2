@@ -14,10 +14,12 @@ alias gk='gitk &'
 alias ga='git add . && git status'
 alias gbd="git branch --list '*/develop*' -a"
 alias gpdo='git push --delete origin'
-alias myremotebranches='git branch -r | tail -n +2 | xargs -L1 git show -s --author=Love'
+alias myremotebranches='git branch -r | xargs -L1 git --no-pager show -s --oneline --author="$(git config user.name)"'
 alias gca='git commit --amend'
 alias vw='vim ~/vimwiki/index.wiki'
 alias vimconf='vim ~/.config/nvim/init.vim'
 alias cdjs='cd ~/git/ufo/projects-js/js-client'
 alias vimconf='vim ~/.config/nvim/init.vim'
 alias bb='source ~/.custom_scripts/bb'
+alias bletooth-sony='sudo bluetoothctl connect 38:18:4C:BD:91:80'
+

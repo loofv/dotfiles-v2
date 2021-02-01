@@ -39,6 +39,7 @@ endif
 set mouse=a
 " Use shift y to copy to system clipboard
 nnoremap Y "+y
+vnoremap Y "+y
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 set splitbelow splitright
 nnoremap <leader><Tab> :b#<CR>
