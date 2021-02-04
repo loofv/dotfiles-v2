@@ -200,9 +200,13 @@ bar {
 # Startup scripts
 exec_always ~/.custom_scripts/startup
 # exec_always ~/.custom_scripts/start-eclipse
-exec teams
+# exec teams
 exec google-chrome
 exec --no-startup-id compton
+# This is to disable dim screen when inactive
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s noblank
 
 # Start certain programs in certain workspaces on startup
 # assign [class="Microsoft Teams - Preview"] $ws1
