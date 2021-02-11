@@ -84,6 +84,8 @@ nnoremap <leader>nt :NERDTree<CR>
 nnoremap <leader>bb :Buffers<CR>
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
+" Compile and run current java file within vim
+nnoremap <F4> :split term://javac % && java %:r <CR>
 " ------------------------------------------------
 " Misc
 " ------------------------------------------------
@@ -116,6 +118,8 @@ augroup autocommands
 				\ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
 				\ |   exe "normal! g`\""
 				\ | endif
+    " Always start in insert mode when opening a terminal within Vim
+    autocmd TermOpen * startinsert
 	" Automatically deletes all trailing whitespace when saving.
 	autocmd BufWritePre * %s/\s\+$//e
 	" Automatically run source on this file after it has been edited to load changes
