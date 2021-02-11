@@ -59,7 +59,7 @@ set signcolumn=yes
 set termguicolors     " enable true colors support
 " Theme
 let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
+" let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 " Hide ugly grey bar to the left
 highlight SignColumn ctermbg=NONE guibg=NONE
@@ -105,7 +105,7 @@ filetype plugin on
 set hidden
 " Coc
 hi CocUnderline cterm=underline gui=underline
-let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css' ]
+let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-java' ]
 " ------------------------------------------------
 " Auto commands
 " ------------------------------------------------
