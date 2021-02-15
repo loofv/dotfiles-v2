@@ -107,7 +107,7 @@ filetype plugin on
 set hidden
 " Coc
 hi CocUnderline cterm=underline gui=underline
-let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-java' ]
+let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-java', 'coc-actions']
 " ------------------------------------------------
 " Auto commands
 " ------------------------------------------------
@@ -122,6 +122,8 @@ augroup autocommands
     autocmd TermOpen * startinsert
 	" Automatically deletes all trailing whitespace when saving.
 	autocmd BufWritePre * %s/\s\+$//e
+    " Automatically do Java imports when saving the file
+    autocmd BufWritePre *.java call CocAction('runCommand', 'editor.action.organizeImport')
 	" Automatically run source on this file after it has been edited to load changes
 	autocmd! bufwritepost .config/nvim/init.vim source %
 augroup END
