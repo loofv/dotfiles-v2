@@ -1,0 +1,8 @@
+Vim commands
+------------
+" This gets the help documentation for a certain command
+:h, or :h autocmd to see what options exist for autocmd.
+------------
+Useful links
+Alacritty themes:
+https://github.com/eendroroy/alacritty-theme
