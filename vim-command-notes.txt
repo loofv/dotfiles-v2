@@ -1,0 +1,4 @@
+# Here I can note down cool things that I want to remember how to do
+
+" This gets the help documentation for a certain command
+:h, or :h autocmd to see what options exist for autocmd.
