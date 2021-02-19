@@ -58,7 +58,7 @@ set termguicolors     " enable true colors support
 " Theme
 let ayucolor="mirage" " for mirage version of theme
 " let ayucolor="dark"   " for dark version of theme
-colorscheme pinto1
+colorscheme lovehtheme1
 filetype plugin indent on
 syntax on
 " Hide ugly grey bar to the left

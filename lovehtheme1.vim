@@ -9,7 +9,7 @@ hi clear
 if exists('syntax on')
     syntax reset
 endif
-let g:colors_name='pinto1'
+let g:colors_name='lovehtheme1'
 set t_Co=256
 
 " Line number
