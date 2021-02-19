@@ -76,3 +76,4 @@ hi Debug          guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gu
 " Language specific
 
 hi JavaStorageClass guifg=#ff5f00
+hi JavaStructure guifg=#ff5f00
