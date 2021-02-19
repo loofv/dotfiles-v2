@@ -1,8 +1,9 @@
 
-"""
-" Name: pinto1.vim
-"""
-
+" ----------------------------------------------------------------------------
+" Theme name: lovehtheme1.vim
+" ----------------------------------------------------------------------------
+" Setup
+" ----------------------------------------------------------------------------
 set background=dark
 hi clear
 
@@ -32,7 +33,13 @@ hi DiffDelete guibg=NONE guifg=red
 " Hide ugly grey bar to the left
 highlight SignColumn ctermbg=NONE guibg=NONE
 
+
+" Variables
+" ----------------------------------------------------------------------------
+let lovecyan = '#20b2aa'
 " major
+" ----------------------------------------------------------------------------
+
 hi Normal     guisp=NONE guifg=#c6c6c4 guibg=NONE ctermfg=251 ctermbg=234 gui=NONE cterm=NONE
 hi Comment    guisp=NONE guifg=#7a4e4e guibg=NONE ctermfg=95  ctermbg=234 gui=NONE cterm=NONE
 hi Constant   guisp=NONE guifg=#1de0da guibg=NONE ctermfg=44  ctermbg=234 gui=NONE cterm=NONE
@@ -47,6 +54,7 @@ hi Error      guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NO
 hi Todo       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 
 " minor
+" ----------------------------------------------------------------------------
 
 hi String         guisp=NONE guifg=#009f6b guibg=NONE ctermfg=35  ctermbg=234 gui=NONE cterm=NONE
 hi Character      guisp=NONE guifg=#009f6b guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -74,6 +82,20 @@ hi SpecialComment guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gu
 hi Debug          guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 
 " Language specific
+" ----------------------------------------------------------------------------
+"  Java
 
 hi JavaStorageClass guifg=#ff5f00
 hi JavaStructure guifg=#ff5f00
+
+" Vim Wiki
+hi VimWikiHeaderChar guifg=#ff5f00
+hi VimWikiHeader1 guifg=#ffd700 gui=bold
+hi VimWikiHeader2 guifg=#ffd700 gui=bold
+hi VimWikiHeader3 guifg=#ffd700 gui=bold
+hi VimWikiHeader4 guifg=#ffd700 gui=bold
+" Really crisp cyan color below, maybe use for java or override cyan?
+hi VimWikiLink guifg=lovecyan
+" hi VimWikiListTodo guifg=#ff5f00 -- this seems to break "o" on a todolist
+" for some reason.
+hi VimWikiHR guifg=#ff5f00
