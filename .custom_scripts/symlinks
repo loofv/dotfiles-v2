@@ -9,4 +9,5 @@ ln -s -f ~/git/dotfiles-v2/.zshrc ~/.zshrc
 ln -s -f ~/git/dotfiles-v2/.custom_scripts/startup ~/.custom_scripts/startup
 ln  -s -f ~/git/dotfiles-v2/loveh-theme.zsh-theme ~/.oh-my-zsh/themes/loveh-theme.zsh-theme
 ln -s -f ~/git/dotfiles-v2/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -ls -f ~/git/dotfiles-v2/lovehtheme1.vim ~/.config/nvim/colors/lovehtheme1.vim
 

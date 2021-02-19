@@ -1,6 +1,7 @@
 mkdir ~/.custom_scripts
 mkdir ~/.config/compton
 mkdir ~/.config/alacritty
+mkdir ~/.config/nvim/colors
 mkdir ~/.custom_scripts
 mkdir ~/Programs
 mkdir ~/Pictures/wallpapers
