@@ -17,8 +17,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'ayu-theme/ayu-vim'
-" Plug 'srcery-colors/srcery-vim'
-" Plug  'altercation/vim-colors-solarized'
+Plug 'uiiaoo/java-syntax.vim'
 call plug#end()
 " ------------------------------------------------
 " Search (SK stuff)
@@ -46,7 +45,6 @@ nnoremap <leader><Tab> :b#<CR>
 " ------------------------------------------------
 " Formatting and appearance
 " ------------------------------------------------
-syntax on
 " Enable autocompletion
 set wildmenu
 set wildmode=longest,list,full
@@ -60,18 +58,21 @@ set termguicolors     " enable true colors support
 " Theme
 let ayucolor="mirage" " for mirage version of theme
 " let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+colorscheme pinto1
+filetype plugin indent on
+syntax on
 " Hide ugly grey bar to the left
 highlight SignColumn ctermbg=NONE guibg=NONE
 " Enable transparent background in vim even when using themes
+" If I start using my own theme, I should move these settings
 hi Normal guibg=NONE ctermbg=NONE
 " Tabs
 set expandtab
 set shiftwidth=4
 set tabstop=4
 " Make tabs visible
-set list
-set listchars=tab:>-
+" set list
+" set listchars=tab:>-
 " ------------------------------------------------
 " Key bindings
 " ------------------------------------------------
@@ -86,6 +87,8 @@ inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 " Compile and run current java file within vim
 nnoremap <F4> :split term://javac % && java %:r <CR>
+" Check which syntax group the word my cursor is on belongs to
+nmap <leader>cl :call <SID>SynStack()<CR>
 " ------------------------------------------------
 " Misc
 " ------------------------------------------------
@@ -102,12 +105,22 @@ set nobackup
 set nowritebackup
 " Settings to make sure vim wiki works
 set nocompatible
-filetype plugin on
 " TextEdit might fail if hidden is not set.
 set hidden
 " Coc
 hi CocUnderline cterm=underline gui=underline
 let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-java', 'coc-actions']
+" ------------------------------------------------
+" Functions
+" ------------------------------------------------
+" Function to find id of syntax group that the cursor is on.
+" I set this to a key binding.
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 " ------------------------------------------------
 " Auto commands
 " ------------------------------------------------
@@ -127,4 +140,3 @@ augroup autocommands
 	" Automatically run source on this file after it has been edited to load changes
 	autocmd! bufwritepost .config/nvim/init.vim source %
 augroup END
-
