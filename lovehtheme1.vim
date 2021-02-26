@@ -33,7 +33,6 @@ hi DiffDelete guibg=NONE guifg=red
 " Hide ugly grey bar to the left
 highlight SignColumn ctermbg=NONE guibg=NONE
 
-
 " Variables
 " ----------------------------------------------------------------------------
 let lovecyan = '#20b2aa'
@@ -95,7 +94,8 @@ hi VimWikiHeader2 guifg=#ffd700 gui=bold
 hi VimWikiHeader3 guifg=#ffd700 gui=bold
 hi VimWikiHeader4 guifg=#ffd700 gui=bold
 " Really crisp cyan color below, maybe use for java or override cyan?
-hi VimWikiLink guifg=lovecyan
+" hi VimWikiLink guifg=lovecyan - haven't figured out how to set variables yet
+hi VimWikiLink guifg=#20b2aa
 " hi VimWikiListTodo guifg=#ff5f00 -- this seems to break "o" on a todolist
 " for some reason.
 hi VimWikiHR guifg=#ff5f00
