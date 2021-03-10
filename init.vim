@@ -18,6 +18,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'ayu-theme/ayu-vim'
 Plug 'uiiaoo/java-syntax.vim'
+Plug 'rstacruz/vim-closer'
+" Plug 'srcery-colors/srcery-vim'
+" Plug  'altercation/vim-colors-solarized'
 call plug#end()
 " ------------------------------------------------
 " Search (SK stuff)
