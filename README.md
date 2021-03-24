@@ -11,9 +11,11 @@ Get the config up and running:
 6. Do setup of nvim and i3.
 7. Install vim-plug WITHOUT the automatic install in config, do it from command line.
 8. do :PlugInstall in Vim to install plugins.
-9. Install yarn according to website instructions (required for coc.nvim).
-10. Install Alacritty according to github instructions. May need to run cargo command like this: ~/.cargo/bin/cargo install alacritty
-11. run symlinks script.
-12. Git settings:
+9. Install nodejs from nodesource github
+10. Install yarn according to website instructions (required for coc.nvim).
+11. Open vim to make CocInstall run.
+12. Install Alacritty according to github instructions. May need to run cargo command like this: ~/.cargo/bin/cargo install alacritty
+13. run symlinks script.
+14. Git settings:
 git config --global core.editor "vim"
 git config --global core.pager cat
