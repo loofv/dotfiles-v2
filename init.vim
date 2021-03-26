@@ -16,7 +16,7 @@ Plug 'ianks/vim-tsx'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
-Plug 'ayu-theme/ayu-vim'
+" Plug 'ayu-theme/ayu-vim'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'rstacruz/vim-closer'
 " Plug 'srcery-colors/srcery-vim'
@@ -59,7 +59,7 @@ set ignorecase
 set signcolumn=yes
 set termguicolors     " enable true colors support
 " Theme
-let ayucolor="mirage" " for mirage version of theme
+" let ayucolor="mirage" " for mirage version of theme
 " let ayucolor="dark"   " for dark version of theme
 colorscheme lovehtheme1
 filetype plugin indent on
