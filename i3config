@@ -10,13 +10,13 @@ set $mod Mod4
 # gaps inner 0
 # gaps outer 0
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 
 # Colors for window border
 # Focused is white, all others are black
-client.focused #FFFFFF #FFFFFF #FFFFFF
-client.unfocused #000000 #000000 #000000
-client.focused_inactive #000000 #000000 #000000
+client.focused #FFFFFF #FFFFFF #FFFFFF #FFFFFF
+client.unfocused #000000 #000000 #000000 #000000
+client.focused_inactive #000000 #000000 #000000 #000000
 
 # Font for window titleR. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
