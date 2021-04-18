@@ -1,6 +1,7 @@
 # Constants
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.custom_scripts:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export ZSH="/home/loveh/.oh-my-zsh"
 ZSH_THEME="loveh-theme"
 source $ZSH/oh-my-zsh.sh
