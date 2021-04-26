@@ -10,4 +10,5 @@ sudo apt-get install arandr
 sudo apt install default-jre
 sudo apt-get update -y && sudo apt-get install -y gitk
 sudo apt install curl
+sudo apt install python3-pip
 pip3 install autotiling
