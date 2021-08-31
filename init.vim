@@ -44,7 +44,7 @@ nnoremap Y "+y
 vnoremap Y "+y
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 set splitbelow splitright
-nnoremap <leader><Tab> :b#<CR>
+nnoremap <leader>t :b#<CR>
 " ------------------------------------------------
 " Formatting and appearance
 " ------------------------------------------------
@@ -112,7 +112,7 @@ set nocompatible
 set hidden
 " Coc
 hi CocUnderline cterm=underline gui=underline
-let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-java', 'coc-actions']
+let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-java', 'coc-actions', 'coc-sh', 'coc-xml', 'coc-html', 'coc-vetur']
 " ------------------------------------------------
 " Functions
 " ------------------------------------------------
