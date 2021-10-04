@@ -1,7 +1,7 @@
 # !bin/sh
 # You may need to create some directories.
 # For instance compton and .custom_scripts.
-ln -s -f ~/git/dotfiles-v2/compton.conf ~/.config/compton/compton.conf
+ln -s -f ~/git/dotfiles-v2/picom.conf ~/.config/picom/picom.conf
 ln -s -f ~/git/dotfiles-v2/init.vim ~/.config/nvim/init.vim
 ln -s -f ~/git/dotfiles-v2/i3config ~/.config/i3/config
 ln -s -f ~/git/dotfiles-v2/.aliases ~/.aliases
