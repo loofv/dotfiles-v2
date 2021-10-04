@@ -214,7 +214,7 @@ exec_always ~/.custom_scripts/startup
 # exec_always ~/.custom_scripts/start-eclipse
 # exec teams
 exec google-chrome-stable
-exec --no-startup-id compton
+exec --no-startup-id picom
 exec_always --no-startup-id autotiling
 
 # This is to disable dim screen when inactive
