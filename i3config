@@ -7,8 +7,8 @@
 set $mod Mod4
 
 # i3 gaps
-# gaps inner 0
-# gaps outer 0
+gaps inner 10
+gaps outer 10
 # You can also use any non-zero value if you'd like to have a border
 for_window [class=".*"] border pixel 2
 
@@ -65,7 +65,7 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+g exec gnome-control-center
 
 #crop-area screenshot by pressing Mod + printscreen
-bindsym --release $mod+p exec gnome-screenshot -i
+# bindsym --release $mod+p exec gnome-screenshot -i
 # prova att pipea till xclip? gjorde ingen skillnad :(
 
 # change focus
@@ -212,8 +212,8 @@ bar {
 # Startup scripts
 exec_always ~/.custom_scripts/startup
 # exec_always ~/.custom_scripts/start-eclipse
-exec teams
-exec google-chrome
+# exec teams
+exec google-chrome-stable
 exec --no-startup-id compton
 exec_always --no-startup-id autotiling
 
