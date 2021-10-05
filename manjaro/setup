@@ -1,0 +1,17 @@
+#!bin/sh
+# Lasy script to setup config
+#############################
+# Update mirrors
+sudo pacman-mirrors --country Sweden,Norway,Germany,Finland && sudo pacman Syyu
+# Installs
+sudo pacman -S git i3-gaps i3status dmenu zsh fzf autotiling arandr zsh-syntax-highlighting nodejs npm feh compton neovim github-cli tk xclip
+sudo pacman -Fy gitk
+# Setup github cli auth
+gh auth login
+
+# Clone this repo
+
+# After this, install alacritty with script, install vim plug and oh my zsh according to github instructions.
+# do pluginstall in vim
+# Restart the computer and that should be everything.
+

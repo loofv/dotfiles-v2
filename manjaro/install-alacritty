@@ -1,0 +1,14 @@
+cd
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
+# Install rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup override set stable
+rustup update stable
+cd ~/alacritty
+pacman -S cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python
+cargo build --release
+~/.cargo/bin/cargo install alacritty
+infocmp alacritty
+echo "Alacritty installed!"
+

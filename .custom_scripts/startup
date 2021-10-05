@@ -5,4 +5,4 @@ xset r rate 220 45
 # Monitor setup, uncomment this line for main computer.
 # xrandr --output eDP-1 --off --output DP-1 --off --output DP-2 --off --output DP-3 --primary --mode 2560x1440 -r 144 --pos 1920x0 --rotate normal
 # Set wallpaper
-feh --bg-scale ~/Downloads/hawkeye-vs-ultron-1366×768.jpg
+feh --bg-scale ~/Downloads/marek-piwnicki-unsplash-edit-4k-2560×1440.jpg

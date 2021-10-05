@@ -1,0 +1,22 @@
+
+= Instructions for Manjaro =
+Run these commands in this order to setup the config.
+* Update mirrors so downloads don't take forever:
+    * sudo pacman-mirrors --country Sweden,Norway,Germany,Finland && sudo pacman Syyu
+* Install the software we need:
+    * sudo pacman -S --needed base-devel
+    * sudo pacman -S git i3-gaps i3status dmenu zsh fzf autotiling arandr zsh-syntax-highlighting nodejs npm feh compton neovim github-cli tk xclip
+    * sudo pacman -Fy gitk
+* Setup github authentication:
+    * gh auth login
+* Clone this repo:
+    * git clone https://github.com/loofv/dotfiles-v2.git
+* Checkout manjaro branch:
+    * git checkout manjaro
+* TODO create scripts to be run here:
+    * symlinks, mkdirs
+* Install from github:
+    * oh-my-zsh
+    * vim plug
+* Run install-alacritty script
+* Run pluginstall in vim

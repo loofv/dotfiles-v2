@@ -97,7 +97,7 @@ nmap <leader>cl :call <SID>SynStack()<CR>
 " ------------------------------------------------
 set noswapfile
 " Be able to yank to regular clipboard
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 " ------------------------------------------------
 " Plugin related settings
 " ------------------------------------------------
