@@ -8,6 +8,7 @@
 " ------------------------------------------------
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vimwiki/vimwiki'
 Plug 'pangloss/vim-javascript'
@@ -30,18 +31,19 @@ set incsearch
 set lazyredraw
 set magic
 set showmatch
+" Disable highlighting for search, I don't need it.
+set nohlsearch
 " Makes search-and-replace show what is being replaced
 set inccommand=nosplit
 if executable('rg')
 	set grepprg=rg\ --vimgrep
 endif
+" Scroll offset, to keep cursor from going all the way to top or bottom
+set scrolloff=15
 " ------------------------------------------------
 " Movement
 " ------------------------------------------------
 set mouse=a
-" Use shift y to copy to system clipboard
-nnoremap Y "+y
-vnoremap Y "+y
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 set splitbelow splitright
 nnoremap <leader>t :b#<CR>
@@ -90,6 +92,8 @@ inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 " Compile and run current java file within vim
 nnoremap <F4> :split term://javac % && java %:r <CR>
+" Run current python file
+nnoremap <leader>rp :split term://python3 % <CR>
 " Check which syntax group the word my cursor is on belongs to
 nmap <leader>cl :call <SID>SynStack()<CR>
 " ------------------------------------------------
